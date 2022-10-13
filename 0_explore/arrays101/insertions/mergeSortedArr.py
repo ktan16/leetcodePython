@@ -22,7 +22,8 @@ class Solution(object):
         
         while n > 0:
             nums1[end] = nums2[n - 1]
-            n, last = n - 1, last - 1
+            n -= 1
+            last -= 1
         
 
         
