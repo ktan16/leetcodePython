@@ -27,4 +27,4 @@ n = 3
 
 ob = Solution()
 ob.merge(nums1, m, nums2, n)
-print(nums1)
+print(nums1) #hello
