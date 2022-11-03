@@ -19,7 +19,8 @@ class Solution(object):
                 nums1[end] = nums2[n - 1]
                 n -= 1
             end -= 1
-        
+
+        # merge rest of list 
         while n > 0:
             nums1[end] = nums2[n - 1]
             n -= 1
