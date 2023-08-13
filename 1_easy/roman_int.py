@@ -10,7 +10,3 @@ class Solution(object):
 
         num = 0
         i = len(s) - 1
-        
-
-
-        
