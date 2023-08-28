@@ -1,4 +1,4 @@
-class Solution(object):
+class Solution(object): # easy
     def containsDuplicate(self, nums):
         """
         :type nums: List[int]
