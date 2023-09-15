@@ -12,14 +12,14 @@ class Solution(object):
         i = 0
 
         while i < len(s) - 1:
-            if ROMAN[s[i + 1]] > ROMAN[s[i]]:
-                num += ROMAN[s[i + 1]] - ROMAN[s[i]]
+            if ROMAN[s[i + 1]] > ROMAN[s[i]]: # if IV, etc
+                num += ROMAN[s[i + 1]] - ROMAN[s[i]] # add V - I = 5 - 1 
                 i += 2
-            else:
+            else: # else add normally
                 num += ROMAN[s[i]]
                 i += 1
         
-        if ROMAN[s[len(s) - 1]] <= ROMAN[s[len(s) - 2]]:
+        if ROMAN[s[len(s) - 1]] <= ROMAN[s[len(s) - 2]]: # if last char is smaller than previous char, add normally ex: III
             num += ROMAN[s[len(s) - 1]]
 
         return num
