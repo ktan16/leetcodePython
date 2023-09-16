@@ -4,6 +4,8 @@ class Solution(object):
         :type s: str
         :rtype: bool
         """
+        dic = {}
+        
         for i in range(len(s)):
             return False
         return True
