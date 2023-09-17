@@ -4,11 +4,21 @@ class Solution(object):
         :type s: str
         :rtype: bool
         """
-        dic = {}
+        stack = []
+
+        pairs = {'}':'{', ')':'(', ']':'['}
         
-        for i in range(len(s)):
-            return False
-        return True
+        for c in s:
+            if c in pairs:
+                if stack and stack[-1] == pairs[c]: # if stack is not empty and last element in stack matches current closing paren
+                    stack.pop()
+                else: # if stack empty or paren not match
+                    return False
+                
+            else:
+                stack.append(c)
+
+        return True if not stack else False
 
 s = '()'
 ob = Solution()
