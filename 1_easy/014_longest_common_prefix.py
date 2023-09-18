@@ -11,8 +11,8 @@ class Solution(object):
         if len(strs) < 1:
             return ""
         
-        if first[0] != last [0]:
-            return ""
+        if len(strs) == 1:
+            return strs[0]
         
         lcp = ""
 
