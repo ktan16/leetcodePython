@@ -11,7 +11,10 @@ class Solution(object):
         # ex: { 'aet' : ['eat', 'tea', 'ate']}
         res = defaultdict(list)
         
+        # loop through each word in list
         for s in strs:
+            # sort word, then use it as key
+            # append the actual word to the list of other words with the same key
             res["".join(sorted(s))].append(s)
         
         return res.values()
