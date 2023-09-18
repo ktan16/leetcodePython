@@ -1,21 +1,21 @@
+from collections import defaultdict
+
 class Solution(object):
     def groupAnagrams(self, strs):
         """
         :type strs: List[str]
         :rtype: List[List[str]]
         """
-        arr = []
-        for str in strs:
-            dic = {}
-            for c in str:
-                if c in dic:
-                    dic[c] += 1
-                else:
-                    dic[c] = 1
-            
-            arr.append(dic)
+        # create dictioary with default value as list
+        # key = sorted s in str, value = list of words with same key
+        # ex: { 'aet' : ['eat', 'tea', 'ate']}
+        res = defaultdict(list)
         
-        print(arr)
+        for s in strs:
+            res["".join(sorted(s))].append(s)
+        
+        return res.values()
+        
 
 ob = Solution()
 
