@@ -74,6 +74,10 @@ print(ord('a')) # ascii value
 strings = ['ab', 'cd', 'ef']
 print(''.join(strings)) # combine list of strings using '' delimiter
 
+str = 'tea'
+print(sorted(str)) # returns sorted list of each char
+                   # ['a', 'e', 't']
+
 ##########
 # QUEUES #
 ##########
