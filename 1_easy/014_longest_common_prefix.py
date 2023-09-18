@@ -4,8 +4,8 @@ class Solution(object):
         :type strs: List[str]
         :rtype: str
         """
-        strs.sort()
-        first = strs[0]
+        strs.sort() # sort strings alphabetically
+        first = strs[0] # compare first and last strings of array
         last = strs[-1]
         
         if len(strs) < 1:
@@ -17,10 +17,10 @@ class Solution(object):
         lcp = ""
 
         for i in range(len(first)):
-            if first[i] == last[i]:
+            if first[i] == last[i]: # add to lcp while first and last are equal to each other
                 lcp += first[i]
             else:
-                break
+                return lcp
         
         return lcp
 
