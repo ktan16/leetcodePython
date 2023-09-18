@@ -134,6 +134,43 @@ for val in myMap.values():
 for key, val in myMap.items():
     print(key, val)
 
+################
+# DEFAULT DICT #
+################
+
+from collections import defaultdict
+
+dic = defaultdict(int) # create dictionary with default value as list
+dic['age'] # will create 'age' : 0 even if not exist yet
+dic['price'] += 10 # will also increment because created from 0
+
+mylist = [1,2,3,2,1,3,4,5,1,2]
+counter = defaultdict(int)
+
+# will count occurrences of each num in list into hashmap
+# key = i, val = occurrences of i
+for i in mylist:
+    counter[str(i)] += 1
+
+fruits = ['apple', 'banana', 'carrot', 'avocado', 'berry', 'orange']
+grouped_fruits = defaultdict(list)
+
+# will group each fruit with same first letter into list
+# key = first letter of fruit, value = list of fruits with first letter
+# {'a' : ['apple', 'avocado'], ...}
+for fruit in fruits:
+    grouped_fruits[fruit[0]].append(fruit)
+
+tuple_list = [("a", 10), ("b", 4), ("c", 7), ("a", 8), ("c", 9)]
+grouped_data = defaultdict(list)
+
+# key = letter, val = list of numbers with letter
+# {'a': [10, 8], ...}
+for key, val in tuple_list:
+    grouped_data[key].append(val)
+
+print(grouped_data)
+
 ##########
 # TUPLES #
 ##########
