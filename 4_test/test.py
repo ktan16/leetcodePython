@@ -1,10 +1,13 @@
-from collections import defaultdict
+nums = [2,2,3,1,1,1]
 
-tuple_list = [("a", 10), ("b", 4), ("c", 7), ("a", 8), ("c", 9)]
+counts = {}
 
-grouped_data = defaultdict(list)
+for num in nums:
+    if num in counts:
+        counts[num] += 1
+    else:
+        counts[num] = 1
 
-for key, val in tuple_list:
-    grouped_data[key].append(val)
+counts = sorted(counts.items(), key=lambda x: x[1], reverse=True)
 
-print(grouped_data)
+print(counts)
