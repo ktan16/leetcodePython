@@ -5,4 +5,7 @@ class Solution(object):
         :type k: int
         :rtype: List[int]
         """
-        
+
+ob = Solution()
+
+nums = [1,1,1,2,2,3]
