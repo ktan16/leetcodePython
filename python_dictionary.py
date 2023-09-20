@@ -56,6 +56,25 @@ arr.sort() # sorts numerically/alphabetically
 arr.sort(reverse = True) # sorts descending
 arr.sort(key = lambda x: len(x)) # lambda function (no name), map all values of array to x and return length of x from mapping
 
+nums = [2,2,3,1,1,1]
+counts = {}
+
+# will create dictionary where key = num, val = occurrence
+# [2,2,3,1,1,1] -> {2: 2, 3: 1, 1: 3}
+for num in nums:
+    if num in counts:
+        counts[num] += 1
+    else:
+        counts[num] = 1
+
+# will create sorted list of tuples based on tuple[0]
+# {2: 2, 3: 1, 1: 3} -> [(3, 1), (2, 2), (1, 3)]
+counts = sorted(counts.items(), key=lambda x: x[0], reverse=True)
+
+# will create sorted list of tuples based on tuple[1]
+# {2: 2, 3: 1, 1: 3} -> [(1, 3), (2, 2), (3, 1)]
+counts = sorted(counts.items(), key=lambda x: x[1], reverse=True)
+
 ###########
 # STRINGS #
 ###########
