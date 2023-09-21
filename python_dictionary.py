@@ -208,7 +208,10 @@ print(myMap[(1,2)])
 mySet.add((1,2))
 print((1,2) in mySet)
 
+#########
 # HEAPS # used for min/max
+#########
+
 import heapq
 
 minHeap = [] # default minheap
