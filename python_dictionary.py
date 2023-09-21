@@ -289,3 +289,26 @@ class MyClass:
     
     def getDoubleLength(self):
         return 2 * self.getLength()
+
+##############
+# TRY/EXCEPT #
+##############
+
+x = 0
+
+# basic try catch
+try:
+    print(x)
+except NameError:
+    print("Variable x is not defined")
+except:
+    print("Something else went wrong")
+finally:
+    print("Final print")
+
+# ways to raise errors
+if x < 0:
+    raise Exception("x must be positive")
+
+if not type(x) is int:
+    raise TypeError("x must be integer")
