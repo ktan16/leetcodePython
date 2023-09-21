@@ -309,6 +309,5 @@ finally:
 # ways to raise errors
 if x < 0:
     raise Exception("x must be positive")
-
 if not type(x) is int:
     raise TypeError("x must be integer")
