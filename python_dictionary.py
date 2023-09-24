@@ -165,7 +165,7 @@ for key, val in myMap.items():
 
 from collections import defaultdict
 
-dic = defaultdict(int) # create dictionary with default value as list
+dic = defaultdict(int) # create dictionary with default value as int
 dic['age'] # will create 'age' : 0 even if not exist yet
 dic['price'] += 10 # will also increment because created from 0
 
