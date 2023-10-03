@@ -314,3 +314,31 @@ if x < 0:
     raise Exception("x must be positive")
 if not type(x) is int:
     raise TypeError("x must be integer")
+
+######################
+# SINGLY-LINKED LIST #
+######################
+
+# Definition for singly-linked list.
+class ListNode(object):
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+    def list_to_linked_list(self, lst):
+        """
+        Converts a regular list to a singly-linked list.
+        :type lst: List[int]
+        :rtype: ListNode
+        """
+        if not lst:
+            return None
+
+        head = ListNode(lst[0])
+        current = head
+
+        for val in lst[1:]:
+            current.next = ListNode(val)
+            current = current.next
+
+        return head
