@@ -9,7 +9,7 @@ class Solution(object):
             return len(nums)
         
         for i in range(len(nums)):
-            if nums[i] == target or nums[i] > target:
+            if nums[i] >= target:
                 return i
 
             
