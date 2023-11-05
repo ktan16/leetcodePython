@@ -32,9 +32,7 @@ class Solution(object):
         # multiply lp_arr[i] to each rp_arr[i] for answer
         for i in range(n):
             answer[i] = lp_arr[i] * rp_arr[i]
-        
-        print(lp_arr)
-        print(rp_arr)
+            
         return answer
     
     def s_productExceptSelf(self, nums):
