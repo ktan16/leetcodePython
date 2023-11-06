@@ -103,6 +103,9 @@ str = 'tea'
 print(sorted(str)) # returns sorted list of each char
                    # ['a', 'e', 't']
 
+str - 'hello'
+rev = str[::-1] # reversed string
+
 ##########
 # QUEUES #
 ##########
