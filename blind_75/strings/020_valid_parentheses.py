@@ -19,7 +19,8 @@ class Solution:
             else:
                 stack.append(paren)
 
-        return True
+        # stack must be empty to be true
+        return True if not stack else False
 
 s = "([][))"
 
